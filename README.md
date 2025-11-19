@@ -1,24 +1,60 @@
-# template-repository 🦾
-codering
-Tijdens het opleveren van code zien we graag dat er een README bestand wordt meegeleverd, dit maakt het gemakkelijker voor een ander om met jouw code verder te gaan of er gebruik van te maken.
-Deze README beschrijft het project, wat je nodig hebt om de code te gebruiken en hoe je de code kunt gebruiken. Uiteraard kan dit ietsje afwijken aan de hand van welke taal je hebt geprogrammeerd, maar blijf het liefst zo dicht bij mogelijk bij deze standaarden.
+# 🛠️ Tool Documentation & Boilerplate Code
 
-De volgende dingen zien we graag in een README:
-- beschrijving: graag zien we een korte beschrijving van je project. dus een korte uitleg wat je code doet als je het gebruikt.
-- imports en versies: graag zien we een lijst met alle imports, packages, software, etc die je hebt gebruikt met de versies. Denk hierbij aan je python versie, dat je iets met "pip install" hebt geinstalleerd of dat je ubuntu 23.04 als operating system hebt gebruikt (dus ook welke versie je hebt geinstalleerd). (test dus ook je code op een andere laptop!!! hierdoor weet je zeker dat je alles genoteerd hebt)
-- architectuur: graag zien we een korte beschrijving van de architectuur van je project. welke bestanden hebben welke bestanden nodig en wat kun je in welk bestand vinden.
-- reference: graag zien we een lijst met welke code je niet zelf hebt gemaakt of gebaseerd hebt op een ander zijn code met daarbij een link naar de originele code en een datum waarop je die code hebt geraadpleegd. Dit zorgt ervoor dat de juiste mensen credit krijgen. (let op, ook als je een functie ergens vandaan haalt en aanpast hoor je nog steeds te zeggen wie daar credit voor krijgt).
-- usage: op het moment dat je extra hardware zoals een robot gebruikt is het fijn als er ook iets uitgelegd wordt over hoe je alles hebt aangesloten en opgestart. Misschien is het wel van belang dat je eerst het programma op de cobot start voordat je de python code op je laptop start.
+**Central repository for hardware initialization, default configurations, and usage snippets.**
 
-- commenting: in code is het vrij normaal om comments te gebruiken om je code duidelijker te maken. Graag zien we dan ook dat dit gedaan wordt.
-	- functie beschrijving: Liefst zien we dat er per functie met een comment uitgelegd wordt hoe de functie werkt en waarvoor ie bedoeld wordt (dit kan vaak in 1 zin). mocht de functie lang zijn dan zien we ook graag comments tussendoor.
-	- Bestand beschrijving: Liefst zien we bovenaan elk bestand dat er een korte beschrijving staat van welke functies er in het bestand geprogrammeerd zijn.
-	- Variabele beschrijving:
 
-Een ReadMe schrijf je in Markdown. in de volgende link vind je wat voorbeelden over hoe je deze kunt stylen:
-https://github.com/lifeparticle/Markdown-Cheatsheet
+## 📖 Overview
+This repository serves as the "Source of Truth" for interacting with the hardware tools used in our projects (Cameras, PLCs, Sensors, Microcontrollers, etc.). 
 
-mocht je wat inspiratie willen kun je op de github hieronder even kijken.
-https://github.com/matiassingers/awesome-readme
+**The goal is to:**
+1. **Standardize:** Ensure everyone initializes a specific camera or PLC the same way.
+2. **Speed Up:** Provide copy-paste ready code blocks to get hardware running in minutes.
+3. **Document:** Record known quirks, required firmware versions, and network settings.
 
-https://integrity.mit.edu/handbook/academic-integrity-handbook
+## 📂 Repository Structure
+We organize tools by **Category** > **Manufacturer** > **Model**.
+
+    tool-documentation/
+    ├── 📷 Cameras/
+    │   ├── Basler/
+    │   └── Cognex/
+    ├── 🤖 PLCs/
+    │   ├── Siemens/
+    │   │   PLCnext/
+    │   └── Beckhoff/
+    ├── 📡 Sensors/
+    │   ├── Keyence/
+    │   └── SICK/
+    └── 📄 README.md
+
+## 🤝 How to Contribute
+Found a new way to optimize a driver? Added a new sensor to the company stack? Please contribute! Because of permission settings, the process differs depending on your role.
+
+### For Staff
+*If you have **write** access to this repository*
+
+1. **Create a Branch:** `feature/add-new-sensor-name`.
+2. **Add Your Folder:** Follow the structure: `Category/Manufacturer/Model`.
+3. **Include Three Things:**
+    * `boilerplate_code`: The code to make it run.
+    * `README.md` (specific to that tool): Pinouts, voltage requirements, link to official PDF manual.
+    * `requirements.txt`: Any software dependencies.
+4. **Submit a Pull Request:** Assign a reviewer from the admin team
+
+### For students
+*If you have **Read-Only** access to this repository*
+
+**Option 1: Fork & Pull Request (Recommended)**
+
+*This is the standard open-source workflow.*
+1. Click the **Fork** button (top right of this page) to create a copy of this repo under your own account.
+2. Add your code and documentation to **your** forked version.
+3. Go to the **Pull Requests** tab.
+4. Click "New Pull Request" -> set "Compare across forks" -> Select your fork as the source.
+
+**Option 2: Contact your Counselor or Supervisor**
+
+*If you are not comfortable with Git forks*
+1. Zip your code folder (ensuring it follows the repository structure and contains the correct documents).
+2. Send it to your project counselor or supervisor.
+3. Ask them to review and merge it into the main branch.
