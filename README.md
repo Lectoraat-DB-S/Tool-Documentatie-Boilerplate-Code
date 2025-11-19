@@ -16,11 +16,10 @@ We organize tools by **Category** > **Manufacturer** > **Model**.
 
     tool-documentation/
     ├── 📷 Cameras/
-    │   ├── Basler/
-    │   └── Cognex/
+    │   └── Basler/
     ├── 🤖 PLCs/
     │   ├── Siemens/
-    │   │   PLCnext/
+    │   ├── PLCnext/
     │   └── Beckhoff/
     ├── 📡 Sensors/
     │   ├── Keyence/
