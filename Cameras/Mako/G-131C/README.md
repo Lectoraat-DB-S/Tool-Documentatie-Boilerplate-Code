@@ -63,4 +63,4 @@ To change the operating mode, you must edit the `main` function inside `acquireP
 
 1. Open `acquirePictures.py` in your text editor.
 2. Locate the `main()` function.
-3. Switch between single picture and streaming mode by calling the function `takePicture()` or `streamPicutres()`.
+3. Switch between single picture and streaming mode by calling the function `takePicture()` or `streamPictures()`.
